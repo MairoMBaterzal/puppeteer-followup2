@@ -14,7 +14,7 @@ app.post('/run', async (req, res) => {
   const estimateUrls = req.body.estimates;
 
   const browser = await puppeteer.launch({
-    headless: false, // Set to true for production
+    headless: true, // Set to true for production
     slowMo: 100, // Slows down interaction for visual tracking
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
